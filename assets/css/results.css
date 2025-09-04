@@ -1,0 +1,329 @@
+/* Results Page Styles - Similar to 16personalities.com */
+
+.psychology-test-container .test-result {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-top: 2rem;
+}
+
+.test-result .card-body {
+    padding: 3rem 2rem;
+}
+
+/* Result Header */
+.result-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.result-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, var(--primary-color, #0073aa), var(--secondary-color, #0056b3));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.result-subtitle {
+    font-size: 1.2rem;
+    color: #6c757d;
+    margin-bottom: 1rem;
+}
+
+/* Result Content */
+.result-content {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Result Description */
+.result-description {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    margin-bottom: 2rem;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+/* Charts and Visualizations */
+.mbti-chart,
+.big-five-chart,
+.simple-chart {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    margin-bottom: 2rem;
+}
+
+.mbti-chart h4,
+.big-five-chart h4,
+.simple-chart h4 {
+    color: #495057;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Progress Bars */
+.progress {
+    height: 12px;
+    border-radius: 6px;
+    background-color: #e9ecef;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.progress-bar {
+    border-radius: 6px;
+    transition: width 1s ease-in-out;
+    position: relative;
+}
+
+.progress-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* Dimension and Factor Items */
+.dimension-bar,
+.factor-item,
+.score-item {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border-left: 4px solid var(--primary-color, #0073aa);
+    transition: all 0.3s ease;
+}
+
+.dimension-bar:hover,
+.factor-item:hover,
+.score-item:hover {
+    background: #e9ecef;
+    transform: translateX(5px);
+}
+
+.dimension-bar .d-flex,
+.factor-item .d-flex,
+.score-item .d-flex {
+    align-items: center;
+    font-weight: 500;
+}
+
+/* Result Actions */
+.result-actions {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #dee2e6;
+}
+
+.result-actions .btn {
+    margin: 0 0.5rem;
+    padding: 0.75rem 2rem;
+    border-radius: 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.result-actions .btn-primary {
+    background: linear-gradient(135deg, var(--primary-color, #0073aa), var(--secondary-color, #0056b3));
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 115, 170, 0.3);
+}
+
+.result-actions .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 115, 170, 0.4);
+}
+
+.result-actions .btn-secondary {
+    background: linear-gradient(135deg, #6c757d, #495057);
+    border: none;
+    box-shadow: 0 4px 15px rgba(108, 117, 125, 0.3);
+}
+
+.result-actions .btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(108, 117, 125, 0.4);
+}
+
+/* Loading Animation */
+.result-loading {
+    text-align: center;
+    padding: 3rem;
+}
+
+.result-loading .spinner-border {
+    width: 3rem;
+    height: 3rem;
+    color: var(--primary-color, #0073aa);
+}
+
+/* Error States */
+.psychology-test-error {
+    background: linear-gradient(135deg, #fff5f5, #fed7d7);
+    border: 2px solid #f56565;
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.psychology-test-error .error-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.psychology-test-error h3 {
+    color: #c53030;
+    margin-bottom: 1rem;
+}
+
+.psychology-test-error p {
+    color: #742a2a;
+    margin-bottom: 1.5rem;
+}
+
+/* Share Button Animation */
+.share-result {
+    position: relative;
+    overflow: hidden;
+}
+
+.share-result::before {
+    content: '📤';
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.share-result:hover::before {
+    left: 10px;
+    opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .test-result .card-body {
+        padding: 2rem 1rem;
+    }
+    
+    .result-title {
+        font-size: 2rem;
+    }
+    
+    .result-description,
+    .mbti-chart,
+    .big-five-chart,
+    .simple-chart {
+        padding: 1.5rem;
+    }
+    
+    .result-actions .btn {
+        display: block;
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .result-title {
+        font-size: 1.8rem;
+    }
+    
+    .result-description,
+    .mbti-chart,
+    .big-five-chart,
+    .simple-chart {
+        padding: 1rem;
+    }
+    
+    .dimension-bar,
+    .factor-item,
+    .score-item {
+        padding: 0.75rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .result-actions,
+    .psychology-test-container .test-form {
+        display: none !important;
+    }
+    
+    .test-result {
+        box-shadow: none !important;
+        border: 1px solid #dee2e6 !important;
+    }
+    
+    .result-title {
+        -webkit-text-fill-color: #000 !important;
+        color: #000 !important;
+    }
+}
+
+/* Accessibility Improvements */
+@media (prefers-reduced-motion: reduce) {
+    .result-content,
+    .progress-bar,
+    .dimension-bar,
+    .factor-item,
+    .score-item,
+    .result-actions .btn {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    .test-result {
+        border: 2px solid #000;
+    }
+    
+    .progress {
+        border: 1px solid #000;
+    }
+    
+    .dimension-bar,
+    .factor-item,
+    .score-item {
+        border: 1px solid #000;
+    }
+}
